@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 export const readInput = (inputFile: string): string[] => {
-    return fs.readFileSync(inputFile, 'utf8').split('\r\n');
+    return fs.readFileSync(inputFile, 'utf8').replace('\r\n', '\n').split('\n');
 };
 
 export const readInputAsNumbers = (inputFile: string): number[] => {
